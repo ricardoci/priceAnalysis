@@ -30,7 +30,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const PORT = 3001;
+const port = process.env.PORT || 3001;
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
@@ -106,7 +106,7 @@ const startApolloServer = async () => {
   server.applyMiddleware({ app });
 
   connection.once("open", () => {
-    app.listen(process.env.PORT, () => {
+    app.listen(port, () => {
       console.log(`API server running on port ${PORT}!`);
       console.log(
         `Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`
