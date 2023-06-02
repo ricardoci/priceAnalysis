@@ -4,7 +4,11 @@
   "description": "",
   "main": "server.js",
   "type": "commonjs",
-  "engines": { "node": "14.x" },
+  "engines": {
+    "npm": "6.x",
+    "platform": "linux",
+    "node": "18.14.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -18,7 +22,7 @@
   "dependencies": {
     "@pinecone-database/pinecone": "^0.1.5",
     "apollo-server-express": "^3.6.2",
-    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "d3-dsv": "^2.0.0",
     "dotenv": "^16.0.3",
