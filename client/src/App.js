@@ -19,8 +19,7 @@ import SingleThought from './pages/SingleThought';
 // new
 import Payment from "./components/StripePayment/Payment";
 import Completion from "./components/StripePayment/Completion";
-import HowItWorks from "./components/HowItWorks";
-import OurTeam from "./components/OurTeam";
+
 // 
 const httpLink = createHttpLink({
   uri: "/graphql",
