@@ -4,8 +4,8 @@ import { useState } from "react";
 function Aichat() {
   // Add State for input and Chat Log
   const [input, setInput] = useState("");
-  const [models, setModels] = useState([]);
-  const [currentModel, setCurrentModel] = useState("ada");
+  
+ 
   const [chatLog, setChatLog] = useState([
     {
       user: "gpt",
