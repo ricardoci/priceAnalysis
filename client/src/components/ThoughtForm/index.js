@@ -83,6 +83,10 @@ const ThoughtForm = () => {
 
   return (
     <div className='containerProfile'>
+      {loading ? (
+        <p>Loading...</p> // Display a loading indicator while data is being fetched
+      ) : (
+        <>
       <h3 className='title text-4xl font-bold title-font mb-10 mt-10'>{isUpdatingThought ? 'Update Bio' : 'Add Bio'}</h3>
 
       {Auth.loggedIn() ? (
@@ -123,6 +127,8 @@ const ThoughtForm = () => {
           You need to be logged in to share your thoughts. Please <Link to="/login">login</Link> or{' '}
           <Link to="/signup">signup.</Link>
         </p>
+      )}
+        </>
       )}
     </div>
   );
